@@ -22,10 +22,3 @@ output "ami_id" {
     value = data.aws_ami.sarigama.id
 }
 
-# data "aws_instance" "server-1" {
-#     instance_id = "i-080d5918fba09c864"
-# }
-
-# output "server_info" {
-#     value = data.aws_instance.server-1.id 
-# }

@@ -8,15 +8,24 @@ variable "instance_type" {
     default = "t3.micro"
 }
 
-variable "ec2_tags" {
-    type    = map
-    default = {
-        Name        = "prav-terraform"
-        Terraform   = "true"
-        Environment = "Dev"
-    }
+
+variable "project" {
+    default = "roboshop"
 }
 
+variable "environment" {
+    default = "dev"
+  
+}
+
+variable "common_tags" {
+    type = map
+    default = {
+        Project = "roboshop"
+        Environment = "dev"
+        Terraform = true
+    }
+}
 
 variable "sg_name" {
     type    = string
